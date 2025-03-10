@@ -79,9 +79,10 @@
   transition: all 0.5s ease-in-out;
   font-size: 25px;
   font-weight: bold;
+  color: rgb(63, 62, 62);
 }
 .home-header a:hover{
-  color: orange;
+  color: orangered;
   transition: all 0.3s ease-in-out;
 }
 .home-header::after{
@@ -95,6 +96,7 @@
   display: flex;
   justify-content: center;
   padding-top: 20px;
+  margin: 40px 0 40px;
 }
 .button-view-all{
   text-decoration: none;
@@ -104,3 +106,59 @@
   color: #fff;
   border-radius: 8px;
 }
+.comments h3{
+  font-size: 27px;
+  color: rgb(63, 62, 62);
+  display: block;
+  position: relative;
+  font-weight: 700;
+}
+.comments h3::after{
+  content: '';
+  width: 15%;
+  height: 1px;
+  background-color: #000;
+  margin-top: 30px;
+  display: block;
+}
+p{
+  font-size: 14px;
+  color: rgb(146, 143, 143);
+}
+.comments p::after{
+  content: ' *';
+  color: orangered;
+}
+.comments-checkbox{
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0 10px;
+}
+.comments-checkbox input{
+  background-color: blue;
+}
+textarea{
+  width: 95%;
+  height: 300px;
+  padding: 20px;
+  font-size: 18px;
+  border-color: rgb(190, 187, 187);
+  font-family: system-ui;
+}
+.comments-aditionals{
+  display: flex;
+  flex-direction: column;
+  color: rgb(146, 143, 143);
+}
+.comments-aditionals input{
+  height: 5px;
+  font-size: 18px;
+  padding:20px;
+  width: 83%;
+}
+.comments-wrapper{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+  font-size: 14px;
+} 

@@ -9,6 +9,38 @@ function HomeHeader({date, title}){
     )
 }
 
+function CommentsAditionals({name, isObligatory}){
+    function getIsObligatory(){
+        return isObligatory ? <span style={{color: 'orangered'}}> *</span> : ''
+    }
+    return(
+        <div className='comments-aditionals'>
+            <label>{name}{getIsObligatory()}</label>
+            <input></input>
+        </div>
+    )
+}
+
+function Comments(){
+    return(
+        <div className='comments'>
+            <h3>Leave a Reply</h3>
+            <p>Your email address will not be published. Required fields are marked</p>
+            <p>Comment</p>
+            <textarea></textarea>
+            <div className='comments-wrapper'>
+                <CommentsAditionals name='Name' isObligatory={true}/>
+                <CommentsAditionals name='Email' isObligatory={true}/>
+                <CommentsAditionals name='Website' />
+            </div> 
+            <div className='comments-checkbox'>
+                <input type="checkbox" />
+                <p>Save my name, email, and website in this browser for the next time I comment.</p>
+            </div>
+        </div>
+    )
+}
+
 export function Main(){
     return (
         <div className='main'>
@@ -25,6 +57,10 @@ export function Main(){
             <div className='button-wrapper'>
                 <a className='button-view-all' href=''>View All</a>
             </div>
+            <div className='comments-section'>
+                <Comments />
+            </div>
+
         </div>
     )
 }
